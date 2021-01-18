@@ -1,0 +1,13 @@
+===== Response
+|===
+|필드명|타입|필수여부|설명|예시
+
+{{#fields}}
+|{{#tableCellContent}}`+{{path}}+`{{/tableCellContent}}
+|{{#tableCellContent}}`+{{type}}+`{{/tableCellContent}}
+|{{#tableCellContent}}{{^optional}}true{{/optional}}{{/tableCellContent}}
+|{{#tableCellContent}}{{description}}{{/tableCellContent}}
+|{{#tableCellContent}}{{#example}}{{.}}{{/example}}{{/tableCellContent}}
+
+{{/fields}}
+|===
