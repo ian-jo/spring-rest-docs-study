@@ -17,12 +17,18 @@ ext {
     set('snippetsDir', file("build/generated-snippets"))
 }
 
+asciidoctor {
+    inputs.dir snippetsDir
+    dependsOn test
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    asciidoctor 'org.springframework.restdocs:spring-restdocs-asciidoctor'
 }
 
 test {
@@ -30,7 +36,13 @@ test {
     useJUnitPlatform()
 }
 
-asciidoctor {
-    inputs.dir snippetsDir
-    dependsOn test
+task copyDocument(type: Copy) {
+    dependsOn asciidoctor
+
+    from file("build/asciidoc/html5/")
+    into file("src/main/resources/static/docs")
+}
+
+build {
+    dependsOn copyDocument
 }
