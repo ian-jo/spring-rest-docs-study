@@ -1,5 +1,6 @@
 package kr.co.hasys;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public abstract class AbstractControllerTest {
 
     @Autowired
     public WebApplicationContext context;
+
+    @Autowired
+    public ObjectMapper objectMapper;
 
     public RestDocumentationResultHandler document;
 

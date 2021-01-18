@@ -1,5 +1,9 @@
 == Shop
 
-=== 삼품조회
+=== 매장 조회
 include::{snippets}/ShopControllerTest/getShop/path-parameters.adoc[]
 include::{snippets}/ShopControllerTest/getShop/response-fields.adoc[]
+
+=== 매장 생성
+include::{snippets}/ShopControllerTest/createShop/request-fields.adoc[]
+include::{snippets}/ShopControllerTest/createShop/response-fields.adoc[]
