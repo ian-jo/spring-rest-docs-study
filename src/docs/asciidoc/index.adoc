@@ -1,4 +1,5 @@
 == Shop
 
-=== Request
-
+=== 삼품조회
+include::{snippets}/ShopControllerTest/getShop/path-parameters.adoc[]
+include::{snippets}/ShopControllerTest/getShop/response-fields.adoc[]
