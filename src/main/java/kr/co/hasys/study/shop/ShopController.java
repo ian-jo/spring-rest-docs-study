@@ -10,8 +10,9 @@ public class ShopController {
     public ShopResponse getShop(@PathVariable long shopId) {
         return ShopResponse.builder()
                 .id(1L)
-                .name("파란헤어")
+                .name("이안헤어")
                 .serviceType(ServiceType.HAIR)
+                .branchName("강남점")
                 .build();
     }
 
@@ -19,21 +20,23 @@ public class ShopController {
     public ShopResponse createShop(@RequestBody ShopRequest shopRequest) {
         return ShopResponse.builder()
                 .id(1L)
-                .name("파란헤어")
-                .serviceType(ServiceType.HAIR)
+                .name(shopRequest.getName())
+                .serviceType(shopRequest.getServiceType())
+                .branchName(shopRequest.getBranchName())
                 .build();
     }
 
     @PutMapping(value = "/shops")
-    public ShopResponse updateShop(@RequestBody ShopRequest shopRequest) {
+    public ShopResponse updateShop(@RequestBody UpdateShopRequest updateShopRequest) {
         return ShopResponse.builder()
-                .id(1L)
-                .name("파란헤어")
-                .serviceType(ServiceType.HAIR)
+                .id(updateShopRequest.getId())
+                .name(updateShopRequest.getName())
+                .serviceType(updateShopRequest.getServiceType())
+                .branchName(updateShopRequest.getBranchName())
                 .build();
     }
 
-    @DeleteMapping(value = "/shops")
-    public void deleteShop(@RequestBody long shopId) {
+    @DeleteMapping(value = "/shops/{shopId}")
+    public void deleteShop(@PathVariable long shopId) {
     }
 }

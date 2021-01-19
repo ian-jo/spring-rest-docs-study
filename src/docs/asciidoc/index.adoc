@@ -4,8 +4,26 @@
 :toc: left
 :toclevels: 3
 
-== 매장 API
+== 매장
 
+=== 1. 매장 조회
 include::{snippets}/get-shop/path-parameters.adoc[]
+include::{snippets}/get-shop/http-request.adoc[]
 include::{snippets}/get-shop/response-fields.adoc[]
-include::{snippets}/get-shop/http-response.adoc[]
+include::{snippets}/get-shop/response-body.adoc[]
+
+=== 2. 매장 등록
+include::{snippets}/create-shop/request-fields.adoc[]
+include::{snippets}/create-shop/http-request.adoc[]
+include::{snippets}/create-shop/response-fields.adoc[]
+include::{snippets}/create-shop/response-body.adoc[]
+
+=== 3. 매장 수정
+include::{snippets}/update-shop/request-fields.adoc[]
+include::{snippets}/update-shop/http-request.adoc[]
+include::{snippets}/update-shop/response-fields.adoc[]
+include::{snippets}/update-shop/response-body.adoc[]
+
+=== 4. 매장 삭제
+include::{snippets}/delete-shop/path-parameters.adoc[]
+include::{snippets}/delete-shop/http-request.adoc[]

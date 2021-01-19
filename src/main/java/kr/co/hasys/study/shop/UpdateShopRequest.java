@@ -6,7 +6,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class ShopRequest {
+public class UpdateShopRequest {
+    private long id;
     private String name;
     private ServiceType serviceType;
     private String branchName;

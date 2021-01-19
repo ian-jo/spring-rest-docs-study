@@ -11,4 +11,5 @@ public class ShopResponse {
     private Long id;
     private String name;
     private ServiceType serviceType;
+    private String branchName;
 }

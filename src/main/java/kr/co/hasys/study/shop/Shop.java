@@ -8,4 +8,5 @@ public class Shop {
     private long id;
     private String name;
     private ServiceType serviceType;
+    private String branchName;
 }
