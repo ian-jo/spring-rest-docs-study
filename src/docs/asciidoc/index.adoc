@@ -27,3 +27,27 @@ include::{snippets}/update-shop/response-body.adoc[]
 === 4. 매장 삭제
 include::{snippets}/delete-shop/path-parameters.adoc[]
 include::{snippets}/delete-shop/http-request.adoc[]
+
+== 디자이너
+
+=== 1. 디자이너 조회
+include::{snippets}/get-styler/path-parameters.adoc[]
+include::{snippets}/get-styler/http-request.adoc[]
+include::{snippets}/get-styler/response-fields.adoc[]
+include::{snippets}/get-styler/response-body.adoc[]
+
+=== 2. 디자이너 등록
+include::{snippets}/create-styler/request-fields.adoc[]
+include::{snippets}/create-styler/http-request.adoc[]
+include::{snippets}/create-styler/response-fields.adoc[]
+include::{snippets}/create-styler/response-body.adoc[]
+
+=== 3. 디자이너 수정
+include::{snippets}/update-styler/request-fields.adoc[]
+include::{snippets}/update-styler/http-request.adoc[]
+include::{snippets}/update-styler/response-fields.adoc[]
+include::{snippets}/update-styler/response-body.adoc[]
+
+=== 4. 디자이너 삭제
+include::{snippets}/delete-styler/path-parameters.adoc[]
+include::{snippets}/delete-styler/http-request.adoc[]
